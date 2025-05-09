@@ -1,0 +1,78 @@
+.header, .nav, .main, .sidebar, .advertisebar, .footer{
+    background-color: bisque;
+border: 2px solid black;
+padding: 5px;
+border-radius: 5px;
+}
+
+.header{
+    grid-area: header;
+
+}
+
+.nav{ grid-area: nav;
+
+}
+
+.main{ grid-area: main; 
+
+}
+
+.sidebar{ grid-area: sidebar;
+
+}
+
+.advertisebar{ grid-area: advertisebar;
+
+}
+
+.footer{ grid-area: footer;
+
+}
+
+
+.body{ 
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header header header header"
+    "nav     main   main  sidebar"
+    "nav     main   main  advertisebar"
+    "footer   footer footer footer"
+    
+    ;
+
+    
+    
+
+}
+
+@media  screen and (max-width: 576px) {
+
+ .body{   grid-template-areas:  
+    "header"
+    "nav"
+    "main"
+    "sidebar"
+    "advertisebar"
+    "footer"
+    ;
+ 
+}
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .body {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "advertisebar advertisebar"
+        "footer footer";
+    }
+  }
+  
+
+

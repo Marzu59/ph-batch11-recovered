@@ -1,0 +1,29 @@
+.parent{
+  
+    padding: 30px;
+background-color: rgb(109, 82, 42);
+display: flex;
+gap: 30px;
+/* justify-content: center; */
+
+/* justify-content: space-around; double gap */ 
+/* justify-content:space-evenly ; same difference gap  */
+/* justify-content: space-between; gap without  1st and last child */
+
+
+align-items: center;
+flex-direction: column;
+/* flex-direction: row; */
+
+
+}
+
+.child{
+    border: 2px solid blue ;
+    background-color: gray;
+    padding: 20px;
+    font-size: 30px;
+  
+     
+    
+}

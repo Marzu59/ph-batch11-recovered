@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index উদাহরণ</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1; /* পেছনের লেয়ার */
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 2; 
+            /* সামনের লেয়ার */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 11,
+    "brand": "Aquafina",
+    "size": "500ml",
+    "price": 20,
+    "color": "Transparent",
+    "image": "https://picsum.photos/200/300?random=1"
+  },
+  {
+    "id": 22,
+    "brand": "Kinley",
+    "size": "1L",
+    "price": 30,
+    "color": "Transparent",
+    "image": "https://picsum.photos/200/300?random=2"
+  },
+  {
+    "id": 33,
+    "brand": "Fresh",
+    "size": "750ml",
+    "price": 25,
+    "color": "Blue",
+    "image": "https://picsum.photos/200/300?random=3"
+  },
+  {
+    "id": 44,
+    "brand": "Mum",
+    "size": "1.5L",
+    "price": 35,
+    "color": "Clear",
+    "image": "https://picsum.photos/200/300?random=4"
+  },
+  {
+    "id": 55,
+    "brand": "Jibon",
+    "size": "250ml",
+    "price": 15,
+    "color": "Transparent",
+    "image": "https://picsum.photos/200/300?random=5"
+  }
+]

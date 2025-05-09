@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+    .active{
+        background-color: orangered;
+        color: aliceblue;
+    }
+</style>
+
+</head>
+<body>
+    
+<header>
+    <nav class="w-11/12 flex justify-between border-b-2 py-5 border-[#17171720]">
+        <div class="logo">
+           <img class="w-[120px]" src="./ph-tube-resources-main/Logo.png" alt="">  
+        </div>
+       
+        <div class="short">
+            <label class="input">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                <input id="searchinput" type="search" required placeholder="Search"/>
+              </label>
+        </div>
+        <div class="blogs">
+        <button class="btn bg-[#FF1F3D] text-white">blogs</button>
+       </div>
+
+    </nav>
+</header>
+
+<nav id="category-continer" class=" flex py-5 gap-5 justify-center">
+
+    <button onclick="loadvideos()" class="btn btn-sm">All</button>
+    
+    
+
+</nav>
+
+
+
+<section id="video-continer" class="grid grid-cols-4  gap-5 mx-auto">
+
+    <div class="flex flex-col col-span-full items-center justify-center  text-center ">
+        <!-- Video Icon -->
+        <div class="text-6xl text-gray-500">
+            <img src="./ph-tube-resources-main/Icon.png" alt="">
+        </div>
+        <!-- Message -->
+        <p class="mt-4 text-lg text-gray-600">Oh, Sorry. There is no video content.</p>
+    </div>
+    
+
+    
+</section>
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="videodetailss" class="modal">
+  <div class="modal-box">
+    <div id="details-container">
+     
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+<script src="./index.js"></script>
+</body>
+</html>

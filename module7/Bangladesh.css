@@ -1,0 +1,246 @@
+.work-sans-normal-font{
+    font-family: "Fira Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color:rgba(245, 245, 245, 1);
+}
+
+
+
+
+
+.signin{ background-color: rgba(245, 245, 245, 1);
+    padding: 15px 30px 15px 30px;
+    border-color: rgba(0, 106, 80, 1);
+    border-radius: 6px;
+    font-size: 18px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.button-color{
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgba(0, 106, 80, 1);
+    padding: 17px 34px 17px 34px;
+    border-radius: 8px;
+    border: none;
+    
+    
+}
+.head1{
+    font-size: 56px;
+    font-weight: 700;
+    width: 622px;
+    
+}
+.tittle{
+    color: rgba(14, 14, 14, 0.5);
+    font-size: 24px;
+    font-weight: 500px;
+    
+}
+.bd2-stritishod{
+    display: flex;
+    background-color: rgba(198, 228, 214, 1);
+    margin-top: 31px;
+    border-radius: 24px;
+    padding: 80px 100px;
+    gap: 64px;
+}
+.margin{
+    margin-left: 160px;
+    margin-right: 160px;
+}
+.sritishod{
+    width: 474px;
+    height: 400px;
+}
+.vision-discription{
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(14, 14, 14, 0.7);
+    margin-bottom: 24px;
+}
+.card-font{
+    font-size: 20px;
+    font-weight: 700;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.di{
+    background-color: rgba(84, 144, 245, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    width: 410.67px;
+    height: 325px;
+    
+}
+
+.ge{
+    background-color:rgba(198, 228, 214, 1);
+    border-radius: 16px;
+    padding: 32px;
+    width: 410.67px;
+    height: 325px;
+}
+
+.mi{ background-color: rgba(247, 235, 207, 1);
+    border-radius: 16px;
+    padding: 32px;
+    width: 410.67px;
+    height: 325px;
+
+}
+.btn1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 20px 11px 20px;
+    border-radius: 8px;
+    border: none;
+
+    background-color: rgba(84, 144, 245, 1);
+    
+}
+
+.btn2{ color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 20px 11px 20px;
+    border-radius: 8px;
+    border: none;
+   background-color: rgba(9, 161, 92, 1);
+}
+.btn3{ color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 20px 11px 20px;
+    border-radius: 8px;
+    border: none;
+   background-color: rgba(255, 194, 57, 1);
+
+}
+.text-description{
+    color: rgba(14, 14, 14, 0.7);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.rnh{
+    color: rgba(14, 14, 14, 1);
+    font-size: 40px;
+    font-weight: 700;
+}
+.rnhd{
+    color: rgba(14, 14, 14, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+}
+.img-size{
+    width: 408px;
+    height: 306px;
+    border-radius: 24px;
+
+}
+.full-blns{
+    margin-top: 24px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    gap: 32px;
+    padding: 48px;
+    border-radius: 24px;
+}
+.s-head{
+    font-size: 32px;
+    font-weight: 700;
+}
+.time{
+    color: rgba(14, 14, 14, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+}
+.rm{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 106, 80, 1);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 13px 26px 13px 26px;
+    border-radius: 8px;
+    border: none;
+    line-height: 21.6px;
+}
+.full-blns2{
+    margin-top: 24px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    gap: 32px;
+    padding: 48px;
+    border-radius: 24px;
+}
+.dt{
+    text-align: center;
+}
+.dk{
+  color: rgba(14, 14, 14, 0.8);
+  font-size: 40px;
+  font-weight: 700
+
+}
+
+.dk2{
+    
+    font-size: 40px;
+  font-weight: 700
+   
+    color: rgba(14, 14, 14, 0.8);
+    
+    
+}
+
+
+.donate-amount{
+    display: flex;
+    gap: 24px;
+    
+    margin-left: 170px;
+
+    
+}
+.digit{
+    padding: 40px 40px;
+    width: 240px;
+    height: 128px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.digit2{
+    background-color: rgba(14, 14, 14, 0.15);
+}
+
+input{
+    background-color: rgba(255, 255, 255, 1);
+    
+}
+    
+   
+
+
+.frm{ height: 64px;
+    width: 1032px;
+    margin-top: 30px;
+text-align: center;
+padding: 20px 40px;
+border: none;
+}
+input[type="placeholder"]{
+    color: rgba(14, 14, 14, 0.3);
+    font-size: 70px;
+}
+.fr{
+    margin-left: 200px;
+}

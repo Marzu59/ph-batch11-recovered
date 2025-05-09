@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ 
+
+
+</head>
+<body class="bg-slate-800">
+    
+ <section class="bg-gray-200 max-w-md min-h-screen mx-auto py-6">
+    <header>
+
+        <nav class="flex justify-around items-center">
+          <img class="w-16" src="./Payoo-MFS-Resources-main/assets/Group.png" alt="">
+          <div>
+            <h1 class="text-3xl font-bold"> <span id="main-balance"> 4500 </span>  $</h1>
+            <p class="border rounded p-1">available balance</p>
+          </div>
+            <button>LogOut</button>
+
+        </nav>
+        
+        <section class="mt-10">
+            <h1 class="font-bold text-2xl mb-2">Welcome to payoo</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            
+            <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+
+                <div id="add-money-box"  class="cursor-pointer box border p-4 border text-center rounded-sm">
+                    <img class="w-8  mx-auto" src="./Payoo-MFS-Resources-main/assets/wallet1.png" alt="">
+                    <h3>add money</h3>
+
+                </div>
+
+                <div id="cashout-box" class="box border p-4 border text-center rounded-sm">
+                    <img class="w-8  mx-auto" src="./Payoo-MFS-Resources-main/assets/send1.png" alt="">
+                    <h3>Cashout</h3>
+
+                </div>
+                <div id="pybill-box" class="box border p-4 border text-center rounded-sm">
+                    <img class="w-8  mx-auto" src="./Payoo-MFS-Resources-main/assets/money1.png" alt="">
+                    <h3>pay bill</h3>
+
+                </div>
+
+                <div id="transfermoney-box"  class="box border p-4 border text-center rounded-sm">
+                    <img class="w-8  mx-auto" src="./Payoo-MFS-Resources-main/assets/bonus1.png" alt="">
+                    <h3>transfer money</h3>
+
+                </div>
+
+                <div id="getbonous-box"  class="box border p-4 border text-center rounded-sm">
+                    <img class="w-8  mx-auto" src="./Payoo-MFS-Resources-main/assets/purse1.png" alt="">
+                    <h3>get bonous</h3>
+
+                </div>
+                <div id="transaction-history-box" class="box border p-4 border text-center rounded-sm">
+                    <img class="w-8  mx-auto" src="./Payoo-MFS-Resources-main/assets/transaction1.png" alt="">
+                    <h3>Transaction histroy</h3>
+
+                </div>
+
+            </div>
+         
+
+            <section  id="add-money-section">
+                <h2> Add money </h2>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      
+                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <legend>Select Bank</legend>
+                            <select id="allbank" class="select">
+                                <option disabled selected>Pick a Mobile Banking</option>
+                                <option value="Nagod">Nagod</option>
+                                <option value="Rocket">Rocket</option>
+                                <option value="Velvet">Velvet</option>
+                              </select>
+                              <fieldset class="fieldset">
+                                <label class="fieldset-label">Account number</label>
+                                <input value="01871570068" id="account-number" type="number" class="input" placeholder="type your number" required/>
+                                
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">amount number</label>
+                                    <input  id="amount" type="number" class="input" placeholder="type your amount number" required/>
+
+                                <label class="fieldset-label">PIN</label>
+                                <input id="pin-number" type="number" class="input" placeholder="Password" required/>
+
+
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <button id="add-money" class="btn btn-neutral border-none bg-blue-700 mt-4">Add money</button>
+                              </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </section>
+
+        <!-- cashoutSection -->
+         <section id="cashout">
+            <h2>Cash out</h2>
+        <fieldset class="fieldset">
+            <label class="fieldset-label">Account number</label>
+            <input value="01871570068" id="account-number" type="number" class="input" placeholder="type your number" required/>
+            
+            <fieldset class="fieldset">
+                <label class="fieldset-label">amount number</label>
+                <input  id="cashout-amount" type="number" class="input" placeholder="type your amount number" required/>
+
+            <label class="fieldset-label">PIN</label>
+            <input id="cashout-pin" type="text" class="input" placeholder="Password" required/>
+
+
+            <div><a class="link link-hover">Forgot password?</a></div>
+            <button id="cashout-btn" class="btn btn-neutral border-none bg-blue-700 mt-4">CashOut</button>
+          </fieldset>
+        </section>
+      
+        <!-- transactionSection -->
+         <section id="transaction-history">
+            <h1 class="text-center text-3xl font-bold text-orange-800">Transaction History</h1>
+
+            <div id="transaction-container">
+
+            </div>
+
+
+         </section>
+
+        </section>
+
+    </header>
+
+ </section>
+
+
+
+<script src="./addMoney.js"></script>
+<script src="./toggle.js"></script>
+<script src="./cashout.js"></script>
+<script src="./ulities.js"></script>
+<script src="./transaction.js"></script>
+
+</body>
+</html>

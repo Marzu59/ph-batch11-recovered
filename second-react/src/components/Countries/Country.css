@@ -1,0 +1,18 @@
+.country{
+    border: 2px solid orange;
+    padding: 5px;
+    border-radius: 14px;
+}
+
+.country-visted{
+    background-color: goldenrod;
+
+}
+.visited-flags-container image{
+    width: 150px;
+
+}
+.visited-flags-container image{
+    width: 150px;
+
+}

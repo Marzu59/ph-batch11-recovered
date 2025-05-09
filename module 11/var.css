@@ -1,0 +1,46 @@
+
+:root{
+    --primary-color: orange;
+    --secondary-color: blue;
+    --font-size: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+h1{
+    color: var(--primary-color);
+
+
+}
+h5{ 
+    background-color:var(--primary-color);
+}
+
+.box{
+    border: 2px solid steelblue ;
+    background-color: var(--primary-color);
+
+}
+.box p{
+    color: steelblue;
+    
+}
+.sidebar{
+    background-color: lightgray;
+}
+.content{
+    background-color: lightblue;
+}
+
+.container{ display: grid;
+    gap: 20px;
+    grid-template-columns: 200px calc(100% - 200px - 20px);
+
+}
