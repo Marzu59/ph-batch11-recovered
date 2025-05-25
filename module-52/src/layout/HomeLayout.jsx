@@ -1,12 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate, useNavigation } from 'react-router';
 import Header from '../components/Header';
 import LatestNews from '../components/LatestNews';
 import Navbar from '../components/Navbar';
 import LeftAside from '../components/homelayout/LeftAside';
 import Rightaside from '../components/Rightaside';
+import LoadingIcon from '../pages/LoadingIcon';
 
 const HomeLayout = () => {
+  const  { state} =useNavigation()
+
     return (
         <div>
 
@@ -21,14 +24,14 @@ const HomeLayout = () => {
             </header>
 
             <main className='w-11/12 mx-auto my-3 grid grid-cols-12'>
-               <aside className='col-span-3'>
+               <aside className='col-span-3 h-fit top-0 sticky' >
                 <LeftAside> </LeftAside>
                </aside>
                 <section className='main col-span-6'>
 
-                    <Outlet> </Outlet>
+                    { state==="loading" ? <LoadingIcon/> : <Outlet> </Outlet> }
                 </section>
-                <aside className='col-span-3'> 
+                <aside className='col-span-3 h-fit top-0 sticky'> 
                     <Rightaside></Rightaside>
                 </aside>
                 

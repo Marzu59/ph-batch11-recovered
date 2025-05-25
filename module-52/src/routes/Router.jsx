@@ -3,6 +3,12 @@ import { createBrowserRouter } from 'react-router';
 import HomeLayout from '../layout/HomeLayout';
 import Home from '../pages/Home';
 import CategoryNEws from '../pages/CategoryNEws';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
+import AuthLayout from '../layout/AuthLayout';
+import NewsDetails from '../pages/NewsDetails';
+import PrivateRoute from '../components/PrivateRoute';
+import LoadingIcon from '../pages/LoadingIcon';
 
 const Router = createBrowserRouter([
 
@@ -18,7 +24,8 @@ const Router = createBrowserRouter([
             {
                 path: '/category/:id',
                 element: <CategoryNEws></CategoryNEws>,
-                loader: ()=> fetch('news.json')
+                loader: ()=> fetch('/news.json'),
+                hydrateFallbackElement: <LoadingIcon></LoadingIcon>
             }
         ]
     
@@ -26,12 +33,27 @@ const Router = createBrowserRouter([
     },
     {
         path: '/auth',
-        element: <h1>Auth layout</h1>
+        element:  <AuthLayout></AuthLayout> ,
+        children: [
+            {
+                path: '/auth/login',
+                element: <Login></Login>
+
+            },
+            {
+                path: 'register',
+                element: <Register></Register>
+            }
+        ]
 
     },
     {
-        path: '/news',
-        element: <h1>news layout</h1>
+        path: '/news-details/:id',
+        element: <PrivateRoute>
+            <NewsDetails></NewsDetails>
+        </PrivateRoute> ,
+        loader: ()=> fetch('/news.json'),
+        hydrateFallbackElement: <LoadingIcon></LoadingIcon>
 
     },
     {
