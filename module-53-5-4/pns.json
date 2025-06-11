@@ -1,0 +1,59 @@
+
+ [ 
+    {
+      "id": 1,
+      "brand": "Apple",
+      "model": "iPhone 14 Pro",
+      "os": "iOS 17",
+      "storage": "256GB",
+      "ram": "6GB",
+      "camera": "48MP",
+      "price": 1099,
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "model": "Galaxy S23 Ultra",
+      "os": "Android 13",
+      "storage": "512GB",
+      "ram": "12GB",
+      "camera": "200MP",
+      "price": 1199,
+      "inStock": false
+    },
+    {
+      "id": 3,
+      "brand": "Google",
+      "model": "Pixel 8",
+      "os": "Android 14",
+      "storage": "128GB",
+      "ram": "8GB",
+      "camera": "50MP",
+      "price": 699,
+      "inStock": true
+    },
+    {
+      "id": 4,
+      "brand": "OnePlus",
+      "model": "OnePlus 12",
+      "os": "Android 14",
+      "storage": "256GB",
+      "ram": "16GB",
+      "camera": "64MP",
+      "price": 799,
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "brand": "Xiaomi",
+      "model": "Mi 13 Pro",
+      "os": "Android 13 (MIUI)",
+      "storage": "512GB",
+      "ram": "12GB",
+      "camera": "108MP",
+      "price": 899,
+      "inStock": false
+    }
+  ]
+
