@@ -1,0 +1,15 @@
+import React from 'react';
+import { NavLink, Outlet } from 'react-router';
+import Header from './Header';
+
+const MainLayout = () => {
+    return (
+        <div>
+            <Header></Header>
+
+            <Outlet></Outlet>
+        </div>
+    );
+};
+
+export default MainLayout;
