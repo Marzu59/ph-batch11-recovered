@@ -29,6 +29,7 @@ async function run() {
     await client.connect();
     
     const coffesCollection =  client.db('coffeDB').collection('coffees')
+    const usersCollection = client.db('coffeDB').collection('users')
       
 
 
@@ -63,6 +64,38 @@ async function run() {
         // console.log(newCoffee)
         const result = await coffesCollection.insertOne(newCoffee)
         res.send(result)
+      })
+         
+      // users api
+      app.post('/users', async(req, res)=>{
+         const userProfile = req.body;
+         const result = await usersCollection.insertOne(userProfile)
+         res.send(result)
+      })
+
+      app.get('/users', async(req, res)=>{
+          const result = await usersCollection.find().toArray();
+          res.send(result)
+      })
+      app.delete('/users/:id', async(req, res)=>{
+          const id = req.params.id;
+          const query = {_id: new ObjectId(id)}
+          const result = await usersCollection.deleteOne(query)
+          res.send(result)
+      })
+      app.patch('/users', async(req, res)=>{
+        const {email, lastsignInTime} = req.body
+        const  filter = { email: email}
+        const updateDoc  =
+        {
+          $set: {
+           lastSignInTime: lastsignInTime
+        }
+      }
+         
+        const result = await usersCollection.updateOne(filter, updateDoc)
+        res.send(result)
+        
       })
         
       app.delete('/coffees/:id', async(req, res)=>{
