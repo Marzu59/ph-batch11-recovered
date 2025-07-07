@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import CoffeeCard from './CoffeeCard';
-import Header from './Header';
+
 
 const Home = () => {
      const initialcoffeess = useLoaderData()

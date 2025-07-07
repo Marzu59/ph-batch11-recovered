@@ -14,7 +14,7 @@ const Addcoffe = () => {
 
   //send coffee data to db
 
-     fetch('http://localhost:3000/coffees', {
+     fetch('https://server-site-ten-lime.vercel.app/coffees', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

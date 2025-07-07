@@ -11,6 +11,11 @@ import Home from './Components/Home.jsx';
 import Addcoffe from './Components/Addcoffe.jsx';
 import UpdateCoffee from './Components/UpdateCoffee.jsx';
 import Coffeedetails from './Components/Coffeedetails.jsx';
+import Signin from './Components/Signin.jsx';
+import Signup from './Components/Signup.jsx';
+import AuthProvider from './Components/Provider/AuthProvider.jsx';
+import Users from './Components/Users.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -21,7 +26,7 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
-        loader: ()=> fetch('http://localhost:3000/coffees')
+        loader: ()=> fetch('https://server-site-ten-lime.vercel.app/coffees')
         
       },
       {
@@ -30,13 +35,26 @@ const router = createBrowserRouter([
       },
       {
         path: '/coffedetails/:id',
-        loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
+        loader: ({params})=> fetch(`https://server-site-ten-lime.vercel.app/coffees/${params.id}`),
         Component: Coffeedetails
       },
       {
         path: '/updatecoffe/:id',
-        loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
+        loader: ({params})=> fetch(`https://server-site-ten-lime.vercel.app/coffees/${params.id}`),
         Component: UpdateCoffee
+      },
+      {
+        path: '/signin',
+        Component: Signin
+      },
+      {
+        path: 'signup',
+        Component: Signup
+      },
+      {
+        path: '/users',
+        loader: ()=> fetch('https://server-site-ten-lime.vercel.app/users'),
+        Component: Users
       }
     ]
   },
@@ -48,6 +66,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={router} />
+     <AuthProvider>
+      <RouterProvider router={router} />
+     </AuthProvider>
   </StrictMode>,
 )
