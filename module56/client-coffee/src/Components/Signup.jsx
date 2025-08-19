@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContex } from './contex/AuthContex';
+import axios from 'axios';
 
 const  Signup  = () => {
        
@@ -27,21 +28,29 @@ const  Signup  = () => {
                 ...profileinfoRemaining,
                creationTime: data.user.metadata.creationTime
             }
+
+            //using axious for post
+            axios.post('http://localhost:3000/users', userProfile)
+            .then(data=> {
+              console.log(data.data)
+            })
+
+
                 
-            // save data on mongoDB
-            fetch('https://server-site-ten-lime.vercel.app/users', {
-                method: 'POST',
-                headers: {
-                    'content-type' : 'application/json'
-                },
-                body: JSON.stringify(userProfile)
-            })
-            .then(res=> res.json())
-            .then(data=>{
-                if(data.insertedId){
-                    console.log('data added on mongo', data.insertedId)
-                }
-            })
+            // save data on mongoDB using fetch
+            // fetch('http://localhost:3000/users', {
+            //     method: 'POST',
+            //     headers: {
+            //         'content-type' : 'application/json'
+            //     },
+            //     body: JSON.stringify(userProfile)
+            // })
+            // .then(res=> res.json())
+            // .then(data=>{
+            //     if(data.insertedId){
+            //         console.log('data added on mongo', data.insertedId)
+            //     }
+            // })
 
 
           })

@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContex } from './contex/AuthContex';
+import axios from 'axios';
 
 const Signin = () => {
 
@@ -20,21 +21,27 @@ const Signin = () => {
          
      const signinInfo = {
         email,
-        lastsignInTime: result.user.metadata.lastSignInTime
+        lastSignInTime: result.user?.metadata?.lastSignInTime
      }
-     // update last signin in database
-     fetch('https://server-site-ten-lime.vercel.app/users', {
-        method: 'PATCH',
-        headers: {
-            'content-type': 'application/json'
-        },  
-        body: JSON.stringify(signinInfo)
-     })
-     .then(res=> res.json())
-     .then(data=> {
-        console.log('after update patch', data)
 
+    //  update last signin Database with axious
+     axios.patch('http://localhost:3000/users', signinInfo)
+     .then(data=> {
+      console.log(data.data)
      })
+     // update last signin in database
+    //  fetch('http://localhost:3000/users', {
+    //     method: 'PATCH',
+    //     headers: {
+    //         'content-type': 'application/json'
+    //     },  
+    //     body: JSON.stringify(signinInfo)
+    //  })
+    //  .then(res=> res.json())
+    //  .then(data=> {
+    //     console.log('after update patch', data)
+
+    //  })
 
 
 

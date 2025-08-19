@@ -15,6 +15,15 @@ import Signin from './Components/Signin.jsx';
 import Signup from './Components/Signup.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import Users from './Components/Users.jsx';
+import './Users2.jsx'
+
+import {
+  
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import Users2 from './Users2.jsx';
+
 
 
 
@@ -26,21 +35,22 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
-        loader: ()=> fetch('https://server-site-ten-lime.vercel.app/coffees')
+        loader: ()=> fetch('http://localhost:3000/coffees')
         
       },
+      // https://server-site-ten-lime.vercel.app/
       {
         path: '/addcoffe',
         Component: Addcoffe
       },
       {
         path: '/coffedetails/:id',
-        loader: ({params})=> fetch(`https://server-site-ten-lime.vercel.app/coffees/${params.id}`),
+        loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
         Component: Coffeedetails
       },
       {
         path: '/updatecoffe/:id',
-        loader: ({params})=> fetch(`https://server-site-ten-lime.vercel.app/coffees/${params.id}`),
+        loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
         Component: UpdateCoffee
       },
       {
@@ -53,8 +63,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/users',
-        loader: ()=> fetch('https://server-site-ten-lime.vercel.app/users'),
+        loader: ()=> fetch('http://localhost:3000/users'),
         Component: Users
+      },
+      {
+        path: '/users2',
+        Component: Users2
+        
       }
     ]
   },
@@ -62,12 +77,17 @@ const router = createBrowserRouter([
 
 
 
-
+// Create a client
+const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <AuthProvider>
+   <QueryClientProvider client={queryClient}>
+      <AuthProvider>
       <RouterProvider router={router} />
      </AuthProvider>
+    </QueryClientProvider>
+
+     
   </StrictMode>,
 )

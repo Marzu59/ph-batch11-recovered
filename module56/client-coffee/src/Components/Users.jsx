@@ -6,6 +6,9 @@ const Users = () => {
     const initialUsers = useLoaderData()
     
     const [users, setUsers]= useState(initialUsers)
+    // const handleLogout =()=>{
+
+    // }
 
     const handleDelete = (_id)=>{
         
@@ -28,7 +31,7 @@ swalWithBootstrapButtons.fire({
 }).then((result) => {
   if (result.isConfirmed) {
 
-   fetch(`https://server-site-ten-lime.vercel.app/users/${_id}`, {
+   fetch(`http://localhost:3000/users/${_id}`, {
     method: 'DELETE'
     
    })
@@ -70,6 +73,7 @@ swalWithBootstrapButtons.fire({
    
     return (
         <div>
+          <div><button  className='btn btn-primary'>Logout</button></div>
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -111,7 +115,7 @@ swalWithBootstrapButtons.fire({
         <td>
           Zemlak, Daniel and Leannon
           <br />
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          <span className="badge badge-ghost badge-sm">Desktop Support Technician {user.lastSignInTime} </span>
         </td>
         <td>Purple</td>
         <th>

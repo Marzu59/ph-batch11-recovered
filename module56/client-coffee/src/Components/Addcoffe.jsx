@@ -9,12 +9,12 @@ const Addcoffe = () => {
     const form = e.target
      const dataa = new FormData(form);
      const CoffeeData = Object.fromEntries(dataa.entries())
-    //  console.log(CoffeeData)
+     console.log(CoffeeData)
 
 
   //send coffee data to db
 
-     fetch('https://server-site-ten-lime.vercel.app/coffees', {
+     fetch('http://localhost:3000/coffees', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

@@ -24,7 +24,7 @@ const CoffeeCard = ({coffee, setCoffeess, coffeess}) => {
 
   if (result.isConfirmed) {
 
-      fetch(`https://server-site-ten-lime.vercel.app/coffees/${_id}`, {
+      fetch(`http://localhost:3000/coffees/${_id}`, {
         method: "DELETE"
 
       })
