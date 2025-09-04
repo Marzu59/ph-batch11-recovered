@@ -20,6 +20,15 @@ const Navbar = () => {
 
 const links = <>
  <li><NavLink>Home</NavLink></li>
+ {/* for applicants.check the role as well */}
+ {
+  user && <>  <li><NavLink to={'/myapplications'}>My Applications</NavLink></li> </>
+ }
+ {/* for recruiter .check role as well */}
+  {
+  user && <>  <li><NavLink to={'/addjob'}>Add Job</NavLink></li>
+      <li><NavLink to={'/mypostedjobs'}>My posted Job</NavLink></li> </>
+ }
       </>
 
     return (

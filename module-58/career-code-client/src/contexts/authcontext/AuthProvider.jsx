@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../../firbase/firebase.init';
+import axios from 'axios';
 
 const AuthProvider = ({children}) => {
  const [loading, setloading] = useState(true)
@@ -25,6 +26,15 @@ const AuthProvider = ({children}) => {
     const subscribe = onAuthStateChanged(auth, currentUser=>{
         setuser(currentUser)
         setloading(false)
+          if(currentUser?.email){
+            axios.post('http://localhost:3000/jwt', {email: currentUser.email},{withCredentials: true} )
+            .then(res=>{
+              console.log(res.data)
+            })
+            .catch(error=>{
+              console.log(error)
+            })
+          }
         console.log('user in herer', currentUser)
     })
     return ()=>{
@@ -38,7 +48,8 @@ const AuthProvider = ({children}) => {
         createnewUser, 
         signIn, 
         user,
-        signOutt
+        signOutt,
+         loading
 
     }
 
